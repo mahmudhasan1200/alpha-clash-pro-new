@@ -23,7 +23,7 @@
             </div>
         </section>
         <!-- playground start -->
-        <section id="play-ground" class=" flex flex-col items-center gap-20 pt-20 hidden">
+        <section id="play-ground" class="hidden flex flex-col items-center gap-20 pt-20">
             <!-- screen -->
             <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
                 <div class="flex justify-center">
@@ -71,28 +71,31 @@
             </div>
              <!-- screen keyboard end -->
               <!-- life score -->
+               <!-- {{{{{Display life}}}}} -->
                <div class="flex justify-between w-3/5">
                 <button class="px-8 py-2 btn rounded-full bg-[#360490] text-white">
                     life
                    <img src="images/h.svg" alt="">
-                    <span>1</span>
+                    <span id="life-score">5</span>
                   </button>
+                  <!-- display score  -->
                   <button class="px-8 py-2 btn rounded-full bg-[#894189] text-white">
                     Score
                    <img src="images/g.svg" alt="">
-                    <span>1</span>
+                    <span id="current-score">0</span>
                   </button>
                </div>
             <!-- playground-end  -->
         </section>
         <!-- score -->
-        <section class="hidden score flex justify-center items-center min-h-screen ">
+        <section id="final-score" class="hidden flex justify-center items-center min-h-screen ">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] rounded-2xl px-10 py-10">
+                <h4 class="text-3xl">Game Over!</h4>
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
-                    <span>14</span>
+                    <span id="last-score">14</span>
                 </h1>
-                <button class="btn">Play Again</button>
+                <button onclick="play()" class="btn">Play Again</button>
                 <p>Practice will make you Pro</p>
             </div>
         </section>
